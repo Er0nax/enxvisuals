@@ -116,7 +116,7 @@ class PageController extends Controller
         switch ($this->info['name']) {
             case 'index':
                 // custom files
-                $customCssFiles[] = 'assets/css/styles.css';
+                //$customCssFiles[] = 'assets/css/styles.css';
                 break;
             case 'dkfksdjfk':
                 $addDefaults = false;
@@ -150,7 +150,7 @@ class PageController extends Controller
         switch ($this->info['name']) {
             case 'index':
                 // custom files
-                $jsFiles[] = ['url' => 'assets/js/scripts.js', 'type' => 'application/javascript'];
+                //$jsFiles[] = ['url' => 'assets/js/scripts.js', 'type' => 'application/javascript'];
                 break;
             case 'dkjfkdsjf':
                 $addDefaults = false;
