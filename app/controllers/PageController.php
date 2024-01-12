@@ -125,7 +125,6 @@ class PageController extends Controller
 
         // default css
         if ($addDefaults) {
-            //$cssFiles[] = 'assets/vendor/bootstrap/css/bootstrap.css';
             $cssFiles[] = 'assets/vendor/sweetalert/css/sweetalert2.min.css';
             $cssFiles[] = 'assets/site/css/lines.css';
         }
@@ -160,7 +159,6 @@ class PageController extends Controller
         // default css
         if ($addDefaults) {
             $jsFiles[] = ['url' => 'assets/vendor/jquery/js/jquery.js', 'type' => 'application/javascript'];
-            //$jsFiles[] = ['url' => 'assets/vendor/bootstrap/js/bootstrap.bundle.js', 'type' => 'application/javascript'];
             $jsFiles[] = ['url' => 'assets/vendor/sweetalert/js/sweetalert2.min.js', 'type' => 'application/javascript'];
             $jsFiles[] = ['url' => 'assets/site/js/basics.js', 'type' => 'module'];
             $jsFiles[] = ['url' => 'assets/site/js/swapper.js', 'type' => 'module'];
