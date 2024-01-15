@@ -116,7 +116,7 @@ class PageController extends Controller
         switch ($this->info['name']) {
             case 'index':
                 // custom files
-                //$customCssFiles[] = 'assets/css/styles.css';
+                $customCssFiles[] = 'assets/css/style.css';
                 break;
             case 'dkfksdjfk':
                 $addDefaults = false;
@@ -130,7 +130,7 @@ class PageController extends Controller
         }
 
         // add custom files (because of order)
-        $this->cssFiles = array_merge($cssFiles, $customCssFiles);
+        $this->cssFiles = array_merge($customCssFiles, $cssFiles);
     }
 
     /**
@@ -149,7 +149,8 @@ class PageController extends Controller
         switch ($this->info['name']) {
             case 'index':
                 // custom files
-                //$jsFiles[] = ['url' => 'assets/js/scripts.js', 'type' => 'application/javascript'];
+                $jsFiles[] = ['url' => 'assets/js/custom_anonymous.js', 'type' => 'application/javascript'];
+                $jsFiles[] = ['url' => 'assets/js/custom.js', 'type' => 'application/javascript'];
                 break;
             case 'dkjfkdsjf':
                 $addDefaults = false;
@@ -164,7 +165,7 @@ class PageController extends Controller
             $jsFiles[] = ['url' => 'assets/site/js/swapper.js', 'type' => 'module'];
         }
 
-        $this->jsFiles = array_merge($jsFiles, $customJsFiles);
+        $this->jsFiles = array_merge($customJsFiles, $jsFiles);
     }
 
     /**

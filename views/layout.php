@@ -25,7 +25,10 @@
 <div class="loading-line"></div>
 
 <!-- Header-->
-<?php include('_partials/header.php'); ?>
+<?php include('_partials/nav.php'); ?>
+
+<!-- Showreel-->
+<?php include('_partials/showreel.php'); ?>
 
 <div id="pagecontent">
 
