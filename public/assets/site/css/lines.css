@@ -87,3 +87,7 @@
 .text-divider::after {
     margin-left: var(--text-divider-gap);
 }
+
+.click {
+    cursor: pointer;
+}
