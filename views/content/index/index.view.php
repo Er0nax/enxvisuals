@@ -4,4 +4,10 @@
 
 <?php $index = new index(); ?>
 
-<?php include('../views/content/index/content.view.php'); ?>
+<ul class="l-main-content main-content">
+    <?php include('../views/content/index/home.view.php'); ?>
+    <?php include('../views/content/index/work.view.php'); ?>
+    <?php include('../views/content/index/about.view.php'); ?>
+    <?php include('../views/content/index/contact.view.php'); ?>
+    <?php include('../views/content/index/hire.view.php'); ?>
+</ul>
