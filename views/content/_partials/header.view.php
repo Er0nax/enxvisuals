@@ -1,6 +1,8 @@
+<?php global $app ?>
+
 <header class="header">
-    <a class="header--logo" href="#0">
-        <img src="assets/images/template/logo.png" alt="Global">
+    <a class="header--logo" href="#">
+        <img src="assets/images/template/logo.png" alt="Logo">
         <p>Global</p>
     </a>
     <button class="header--cta cta">Hire Us</button>
