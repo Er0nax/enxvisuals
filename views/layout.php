@@ -24,25 +24,47 @@
 <body>
 <div class="loading-line"></div>
 
-<!-- Header-->
-<?php include('_partials/nav.php'); ?>
-
-<!-- Showreel-->
-<?php include('_partials/showreel.php'); ?>
-
-<div id="pagecontent">
-
-    <!-- site functions -->
-    <?php if (file_exists('../app/modules/site/' . $app->page->info['name'] . '.php')) : ?>
-        <?php include('../app/modules/site/' . $app->page->info['name'] . '.php') ?>
-    <?php endif ?>
-
-    <!-- content-->
-    <?php include('../views/content/' . $app->page->info['name'] . '/index.view.php'); ?>
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+    <a class="device-notification--logo" href="#0">
+        <img src="assets/images/template/logo.png" alt="Global">
+        <p>Global</p>
+    </a>
+    <p class="device-notification--message">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
 </div>
 
-<!-- Footer-->
-<?php include('_partials/footer.php'); ?>
+
+<div class="perspective effect-rotate-left">
+    <div class="container">
+        <div class="outer-nav--return"></div>
+        <div id="viewport" class="l-viewport">
+            <div class="l-wrapper">
+
+                <!-- Header-->
+                <?php include('_partials/header.php'); ?>
+
+                <!-- inner nav-->
+                <?php include('_partials/innerNav.php'); ?>
+
+                <!--<div id="pagecontent">-->
+                    <!-- site functions -->
+                    <?php if (file_exists('../app/modules/site/' . $app->page->info['name'] . '.php')) : ?>
+                        <?php include('../app/modules/site/' . $app->page->info['name'] . '.php') ?>
+                    <?php endif ?>
+
+                    <!-- content-->
+                    <?php include('../views/content/' . $app->page->info['name'] . '/index.view.php'); ?>
+                <!--</div>-->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- outer nav-->
+    <?php include('_partials/outerNav.php'); ?>
+
+</div>
+
 
 <script>
     const siteUrl = '<?= $app->settings->url ?>';
