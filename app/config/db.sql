@@ -126,6 +126,20 @@ CREATE TABLE IF NOT EXISTS `projects` (
 -- Exportiere Daten aus Tabelle enxvisuals.projects: ~0 rows (ungefähr)
 DELETE FROM `projects`;
 
+-- Exportiere Struktur von Tabelle enxvisuals.quotes
+CREATE TABLE IF NOT EXISTS `quotes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `quote` varchar(1000) NOT NULL,
+  `author` varchar(100) NOT NULL,
+  `active` enum('true','false') NOT NULL DEFAULT 'true',
+  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Exportiere Daten aus Tabelle enxvisuals.quotes: ~0 rows (ungefähr)
+DELETE FROM `quotes`;
+
 -- Exportiere Struktur von Tabelle enxvisuals.remember_tokens
 CREATE TABLE IF NOT EXISTS `remember_tokens` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
